@@ -71,7 +71,7 @@ if($reply['ok']){
         <button class="button form-item" id='button' type="submit"> Get my Invite </button>
         <p class="muted"> <a href="https://<?php echo $name; ?>.slack.com">Already have an account? Click here to go to Slack.<a> </p>
         <div class="g-recaptcha" data-sitekey="<?php echo SITEKEY; ?>"></div>
-        <p class="muted note"> <b>Note:</b> <?php echo NOTE; ?></p>
+        <?php if (strlen(NOTE) > 0) : ?><p class="muted note"> <b>Note:</b> <?php echo NOTE; ?></p><?php endif; ?>
       </form>
     </div>
 
